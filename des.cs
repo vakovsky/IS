@@ -1,4 +1,18 @@
- public class DES
+        static async Task Main(string[] args)
+        {
+            string originalText = "Здравей свят!";
+            string key = "12345678";   // DES изисква 8 байта
+            string iv = "87654321";   // 8 байта IV
+
+            string encrypted = DES.Encrypt(originalText, key, iv);
+            string decrypted = DES.Decrypt(encrypted, key, iv);
+
+            Console.WriteLine("Оригинал: " + originalText);
+            Console.WriteLine("Криптиран: " + encrypted);
+            Console.WriteLine("Декриптиран: " + decrypted);
+        }
+
+public class DES
  {
      public static string Encrypt(string plainText, string key, string iv)
      {
