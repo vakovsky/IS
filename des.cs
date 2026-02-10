@@ -1,4 +1,4 @@
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
             string originalText = "Здравей свят!";
             string key = "12345678";   // DES изисква 8 байта
