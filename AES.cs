@@ -1,3 +1,19 @@
+static void Main(string[] args)
+{
+    string originalText = "Здравей свят!";
+
+    Console.WriteLine("Оригинал: " + originalText);
+    Console.WriteLine();
+
+    string key3 = "1234567890ABCDEF";
+    string iv3 = "ABCDEF1234567890";
+    string encrypted3 = AES.Encrypt(originalText, key3, iv3);
+    string decrypted3 = AES.Decrypt(encrypted3, key3, iv3);
+    Console.WriteLine("AES Криптиран: " + encrypted3);
+    Console.WriteLine("AES Декриптиран: " + decrypted3);
+}
+
+
 public class AES
 {
     public static string Encrypt(string plainText, string key, string iv)
