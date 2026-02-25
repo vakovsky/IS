@@ -1,3 +1,8 @@
+string originalText = "Здравей свят!";
+
+Console.WriteLine("Оригинал: " + originalText);
+Console.WriteLine();
+
 RSAIE.GenerateAndSaveKeys("publicKey.xml", "privateKey.xml");
 
 // 2️⃣ Зареждане на ключовете от файл
