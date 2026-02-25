@@ -1,3 +1,30 @@
+RSAIE.GenerateAndSaveKeys("publicKey.xml", "privateKey.xml");
+
+// 2️⃣ Зареждане на ключовете от файл
+string publicKey = RSAIE.LoadKey("publicKey.xml");
+string privateKey = RSAIE.LoadKey("privateKey.xml");
+
+// 3️⃣ Криптиране с публичен ключ
+string encrypted7 = RSAIE.Encrypt(originalText, publicKey);
+
+// 4️⃣ Декриптиране с частен ключ
+string decrypted7 = RSAIE.Decrypt(encrypted7, privateKey);
+
+Console.WriteLine("RSA Криптиран: " + encrypted7);
+Console.WriteLine("RSA Декриптиран: " + decrypted7);
+
+// Подписване
+string signature = RSAIE.Sign(originalText, privateKey);
+
+Console.WriteLine("Съобщение: " + originalText);
+Console.WriteLine("Подпис: " + signature);
+
+// Проверка
+bool valid = RSAIE.Verify(originalText, signature, publicKey);
+
+Console.WriteLine("Подписът валиден ли е? " + valid);
+
+
 public class RSAIE
 {
     // 🔑 Генерира ключове и ги записва във файлове
