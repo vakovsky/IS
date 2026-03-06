@@ -4,5 +4,4 @@
 #### [DES страница ...]
 ### [DES с използване на библиотеки](https://github.com/vakovsky/ISandCyberSecurity/blob/main/DES.cs)
 ### [DES без използване на библиотеки](https://github.com/vakovsky/ISandCyberSecurity/blob/main/MyDES.cs)
-https://anycript.com/crypto
 ### [https://anycript.com/crypto](https://anycript.com/crypto)
